@@ -42,7 +42,7 @@ rooms = zeros(noRooms,noValues + 1);
 % Position, Size, Temp Range (min,max), Windows, Electronics, Luxery
 for i = 1:noRooms
     % Position
-    rooms(i,1) = 1;
+    rooms(i,1) = i;
     
     % Size
     rawSize =  meanSize + varSize * randn;
