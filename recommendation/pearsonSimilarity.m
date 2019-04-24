@@ -13,7 +13,10 @@ for i = 1:noScores
     xSum = xSum + (e1Scores(i) - e1Average)^2;
     ySum = ySum + (e2Scores(i) - e2Average)^2;
 end
-
-sim = combinedSum / (sqrt(xSum)*sqrt(ySum));
+if xSum == 0 || ySum == 0
+    sim = 0;
+else
+    sim = combinedSum / (sqrt(xSum)*sqrt(ySum));
+end
 end
 
